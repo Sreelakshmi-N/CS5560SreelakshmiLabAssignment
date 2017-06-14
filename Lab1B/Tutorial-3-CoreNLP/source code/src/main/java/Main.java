@@ -20,6 +20,8 @@ import java.nio.file.Files;
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -36,7 +38,7 @@ public class Main {
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 
         // read some text from the file..
-        BufferedReader br = new BufferedReader(new FileReader("sample.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
 
 
 
@@ -87,8 +89,10 @@ public class Main {
                         System.out.println(token + ":" + ne);
 
                         System.out.println("\n\n");
-                    }
 
+                        BufferedWriter writer = new BufferedWriter(new FileWriter(
+                                "file2.txt", true));
+                    }
                     // this is the parse tree of the current sentence
                     Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
                     System.out.println(tree);
