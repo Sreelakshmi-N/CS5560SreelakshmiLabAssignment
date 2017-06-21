@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Tutorial-3-CoreNLP.iml" filepath="$PROJECT_DIR$/.idea/Tutorial-3-CoreNLP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source code/.idea/modules/source-code.iml" filepath="$PROJECT_DIR$/source code/.idea/modules/source-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source code/.idea/modules/source-code-build.iml" filepath="$PROJECT_DIR$/source code/.idea/modules/source-code-build.iml" />
     </modules>
   </component>
 </project>
