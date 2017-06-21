@@ -9,7 +9,7 @@ import java.util.*;
 import java.io.*;
 
 
-public class kit {
+public class Examp {
     public static void main(String args[]) throws IOException{
 
         // creates a StanfordCoreNLP object.
@@ -22,8 +22,8 @@ public class kit {
         String outputPath ;
 
         // The name of the file to open
-        inputPath = "C:\\Users\\sreel\\Documents\\GitHub\\CS5560SreelakshmiLabAssignment\\Lab2\\Source\\006.txt" ;
-        outputPath = "C:\\Users\\sreel\\Documents\\GitHub\\CS5560SreelakshmiLabAssignment\\Lab2\\Source\\bbc";
+        inputPath = "C:\\Users\\sreel\\Documents\\GitHub\\CS5560SreelakshmiLabAssignment\\Lab2\\Source\\file.txt" ;
+        outputPath = "C:\\Users\\sreel\\Documents\\GitHub\\CS5560SreelakshmiLabAssignment\\Lab2\\Source\\inp";
 
         // The below code is for Lab 1b - 2
         // Read the input file

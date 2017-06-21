@@ -2,10 +2,8 @@ import java.nio.file.{Files, Paths}
 
 import org.apache.spark.{SparkContext, SparkConf}
 
-/**
-  * Created by user on 6/17/2017.
-  */
-object sRat {
+
+object Samp {
 
   def main(args: Array[String]) {
 
