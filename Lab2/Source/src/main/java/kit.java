@@ -22,8 +22,8 @@ public class kit {
         String outputPath ;
 
         // The name of the file to open
-        inputPath = "C:\\Users\\user\\Desktop\\bbc\\006.txt" ;
-        outputPath = "C:\\Users\\user\\Desktop\\bbc";
+        inputPath = "C:\\Users\\sreel\\Documents\\GitHub\\CS5560SreelakshmiLabAssignment\\Lab2\\Source\\006.txt" ;
+        outputPath = "C:\\Users\\sreel\\Documents\\GitHub\\CS5560SreelakshmiLabAssignment\\Lab2\\Source\\bbc";
 
         // The below code is for Lab 1b - 2
         // Read the input file
