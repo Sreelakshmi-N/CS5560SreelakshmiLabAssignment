@@ -71,8 +71,6 @@ public class Samp {
                 Arrays.asList(
                         newArray
                 ), 6);
-//    JavaPairRDD<String,String> pairRDD = sc.parallelizePairs(inputList);
-//    pairRDD.mapToPair(tuple -> tuple);
 
 
         JavaPairRDD<Character, Iterable<String>> rddY = rddX.groupBy(word -> word.charAt(0));
