@@ -3,19 +3,16 @@ import java.io.File
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.feature.{Word2Vec, Word2VecModel}
 
-/**
-  * Created by Mayanka on 19-06-2017.
-  */
 object W2V {
   def main(args: Array[String]): Unit = {
-    //System.setProperty("hadoop.home.dir", "C:\\winutil");
+    System.setProperty("hadoop.home.dir", "C:\\winutil");
 
     val sparkConf = new SparkConf().setAppName("SparkWordCount").setMaster("local[*]")
       .set("spark.driver.memory", "6g").set("spark.executor.memory", "6g")
 
     val sc = new SparkContext(sparkConf)
 
-    val input = sc.textFile("data/sample").map(line => line.split(" ").toSeq)
+    val input = sc.textFile("data/A1.txt").map(line => line.split(" ").toSeq)
 
     val modelFolder = new File("myModelPath")
 

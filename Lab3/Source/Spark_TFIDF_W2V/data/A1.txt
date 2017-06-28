@@ -1,33 +1,4 @@
-The dog see
-dog see John
-see John in
-John in the
-in the park.
-the park. The
-park. The little
-The little bear
-little bear see
-bear see the
-see the fine
-the fine fat
-fine fat trout
-fat trout in
-trout in the
-in the rocky
-the rocky brook.
-rocky brook. The
-brook. The dog
-The dog start
-dog start chase
-start chase John.
-chase John. The
-John. The little
-The little bear
-little bear catch
-bear catch a
-catch a fish
-a fish in
-fish in the
-in the rocky
-the rocky brook
-rocky brook .
+The dog saw John in the park.
+The little bear saw the fine fat trout in the rocky brook.
+The dog started chasing John.
+The little bear caught a fish in the rocky brook.
