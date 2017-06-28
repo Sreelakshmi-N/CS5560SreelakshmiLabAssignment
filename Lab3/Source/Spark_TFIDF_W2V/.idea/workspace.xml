@@ -41,7 +41,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="TF_IDF.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TF_IDF.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/TF_IDF.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
@@ -93,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="W2V.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="W2V.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/W2V.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
-              <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -121,11 +121,11 @@
       <list>
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/scriptFile.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/W2V.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/CoreNLP.java" />
         <option value="$PROJECT_DIR$/src/main/scala/NGRAM.scala" />
         <option value="$PROJECT_DIR$/data/A1.txt" />
         <option value="$PROJECT_DIR$/src/main/scala/TF_IDF.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/W2V.scala" />
       </list>
     </option>
   </component>
@@ -249,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TF_IDF">
+  <component name="RunManager" selected="Application.W2V">
     <configuration default="false" name="TF_IDF" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TF_IDF" />
@@ -595,16 +595,16 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TF_IDF" />
-        <item index="1" class="java.lang.String" itemvalue="Application.NGRAM" />
-        <item index="2" class="java.lang.String" itemvalue="Application.CoreNLP" />
-        <item index="3" class="java.lang.String" itemvalue="Application.W2V" />
+        <item index="0" class="java.lang.String" itemvalue="Application.W2V" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TF_IDF" />
+        <item index="2" class="java.lang.String" itemvalue="Application.NGRAM" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CoreNLP" />
         <item index="4" class="java.lang.String" itemvalue="Application.TF_IDF$" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1497904698421" />
+    <option name="lastUpdateTimestamp" value="1498610008215" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -647,7 +647,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1932" height="1048" extended-state="1" />
+    <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1089,14 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/W2V.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1136,6 +1128,14 @@
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/W2V.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

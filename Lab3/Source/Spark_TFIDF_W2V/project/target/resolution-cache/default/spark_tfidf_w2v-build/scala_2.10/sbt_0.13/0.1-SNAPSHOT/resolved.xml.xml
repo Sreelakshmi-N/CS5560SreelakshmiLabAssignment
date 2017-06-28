@@ -4,7 +4,7 @@
 		module="spark_tfidf_w2v-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170619153331"
+		publication="20170627193226"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
