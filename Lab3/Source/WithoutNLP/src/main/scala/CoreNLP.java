@@ -8,9 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by Mayanka on 21-Jun-16.
- */
+
 public class CoreNLP {
 
     public static String returnLemma(String sentence) {
