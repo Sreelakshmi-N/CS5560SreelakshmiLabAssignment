@@ -11,7 +11,7 @@ import scala.collection.immutable.HashMap
 object TF_IDF {
   def main(args: Array[String]): Unit = {
 
-    System.setProperty("hadoop.home.dir", "D:\\Mayanka Lenevo F Drive\\winutils")
+    System.setProperty("hadoop.home.dir", "c:\\winutil")
 
     val sparkConf = new SparkConf().setAppName("SparkWordCount").setMaster("local[*]")
 
