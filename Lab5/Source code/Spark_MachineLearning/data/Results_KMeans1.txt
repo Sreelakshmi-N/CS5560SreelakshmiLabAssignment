@@ -1,0 +1,10 @@
+
+Corpus summary:
+	 Training set size: 2 documents
+	 Vocabulary size: 10835 terms
+	 Preprocessing time: 16.360817612 sec
+
+Finished training KMeans model.  Summary:
+	 Training time: 1.521556889 sec
+file:/C:/Users/sreel/IdeaProjects/Spark_MachineLearning/data/bbc_news_group/file.txt;0
+file:/C:/Users/sreel/IdeaProjects/Spark_MachineLearning/data/bbc_news_group/sentenceSample;0
