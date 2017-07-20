@@ -6,16 +6,17 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/sreel/ontologies/2017/6/untitled-ontology-32">
+    <Prefix name="" IRI="http://www.semanticweb.org/sreel/ontologies/2017/6/untitled-ontology-32#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <NamedIndividual IRI="#Sasha"/>
+        <ObjectProperty IRI="#hasDaughter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Sasha"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Husband"/>
@@ -81,12 +82,22 @@
         <ObjectProperty IRI="#hasHusband"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="#Daughter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasParent"/>
+                <NamedIndividual IRI="#Obama"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Husband"/>
         <ObjectIntersectionOf>
             <Class IRI="#Person"/>
             <ObjectHasValue>
-                <ObjectProperty IRI="#hasHusband"/>
-                <NamedIndividual IRI="#Obama"/>
+                <ObjectProperty IRI="#hasGender"/>
+                <NamedIndividual IRI="#Male"/>
             </ObjectHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -138,10 +149,6 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <ClassAssertion>
-        <Class IRI="#Gender"/>
-        <NamedIndividual IRI="#Female"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Education"/>
         <NamedIndividual IRI="#Law"/>
     </ClassAssertion>
@@ -158,45 +165,69 @@
         <NamedIndividual IRI="#Malia"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Parent"/>
-        <NamedIndividual IRI="#Michelle"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Parent"/>
-        <NamedIndividual IRI="#Obama"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Daughter"/>
-        <NamedIndividual IRI="#Sasha"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Education"/>
         <NamedIndividual IRI="#Scholarship"/>
     </ClassAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasHusband"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Malia"/>
+        <NamedIndividual IRI="#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParent"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasPresident"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasWife"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <InverseObjectProperties>
+        <NamedIndividual IRI="#Malia"/>
+        <NamedIndividual IRI="#Michelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParent"/>
+        <NamedIndividual IRI="#Malia"/>
+        <NamedIndividual IRI="#Obama"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Michelle"/>
+        <NamedIndividual IRI="#Malia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Michelle"/>
+        <NamedIndividual IRI="#Sasha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Michelle"/>
+        <NamedIndividual IRI="#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Obama"/>
+        <NamedIndividual IRI="#Malia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Obama"/>
+        <NamedIndividual IRI="#Sasha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Obama"/>
+        <NamedIndividual IRI="#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Sasha"/>
+        <NamedIndividual IRI="#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParent"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasHusband"/>
-        <ObjectProperty IRI="#hasWife"/>
-    </InverseObjectProperties>
+        <NamedIndividual IRI="#Sasha"/>
+        <NamedIndividual IRI="#Michelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParent"/>
+        <NamedIndividual IRI="#Sasha"/>
+        <NamedIndividual IRI="#Obama"/>
+    </ObjectPropertyAssertion>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasDaughter"/>
     </FunctionalObjectProperty>
