@@ -13,10 +13,13 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Cuisine"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Mother"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Syed"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#FullName"/>
@@ -28,40 +31,37 @@
         <Class IRI="#Ethnicity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Leo"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Parent"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Daughter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Female"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Mary"/>
+        <ObjectProperty IRI="#hasFullname"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasGender"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasSibling"/>
+        <NamedIndividual IRI="#Mary"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasColor"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Anna"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#White"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jessica"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasParent"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Offspring"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Son"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Asian"/>
     </Declaration>
     <Declaration>
         <Class IRI="#American"/>
@@ -73,16 +73,49 @@
         <Class IRI="#Father"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Male"/>
+        <Class IRI="#Fullname"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Color"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Black"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasLanguage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Gender"/>
+        <Class IRI="#Person"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Black"/>
+        <NamedIndividual IRI="#Jasmine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Cuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Daughter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Female"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSibling"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Son"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Male"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gender"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#African"/>
@@ -115,6 +148,13 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Cuisine"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCuisine"/>
+            <Class IRI="#Cuisine"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Daughter"/>
         <ObjectIntersectionOf>
             <Class IRI="#Person"/>
@@ -125,6 +165,83 @@
             <ObjectHasValue>
                 <ObjectProperty IRI="#hasGender"/>
                 <NamedIndividual IRI="#Female"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Father"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasChild"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasGender"/>
+                <NamedIndividual IRI="#Male"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Fullname"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFullname"/>
+            <Class IRI="#Fullname"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Mother"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasChild"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasGender"/>
+                <NamedIndividual IRI="#Female"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Offspring"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasChild"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasGender"/>
+                <Class IRI="#Gender"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Parent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasChild"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasGender"/>
+                <Class IRI="#Gender"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Son"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasParent"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasGender"/>
+                <NamedIndividual IRI="#Male"/>
             </ObjectHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -141,12 +258,20 @@
         <Class IRI="#Ethnicity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Cuisine"/>
+        <Class IRI="#Ethnicity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Daughter"/>
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Father"/>
         <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fullname"/>
+        <Class IRI="#Ethnicity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mother"/>
@@ -177,12 +302,37 @@
         <Class IRI="#Person"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Anna"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Ethnicity"/>
         <NamedIndividual IRI="#Black"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gender"/>
         <NamedIndividual IRI="#Female"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Ethnicity"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Jasmine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Ethnicity"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Jessica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Ethnicity"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Leo"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gender"/>
@@ -193,19 +343,55 @@
         <NamedIndividual IRI="#Mary"/>
     </ClassAssertion>
     <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Ethnicity"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Syed"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Ethnicity"/>
         <NamedIndividual IRI="#White"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Anna"/>
+        <NamedIndividual IRI="#Female"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#Mary"/>
         <NamedIndividual IRI="#Female"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Color"/>
+        <NamedIndividual IRI="#Anna"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">White</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Cuisine"/>
+        <NamedIndividual IRI="#Anna"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pizza
+Sandwich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#Anna"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Anna Brown</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#FullName"/>
         <NamedIndividual IRI="#Mary"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mary Jost</Literal>
     </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCuisine"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFullname"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasChild"/>
         <ObjectProperty IRI="#hasParent"/>
@@ -213,9 +399,6 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasGender"/>
     </FunctionalObjectProperty>
-    <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="#hasColor"/>
-    </InverseFunctionalObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#hasSibling"/>
     </SymmetricObjectProperty>
@@ -223,17 +406,125 @@
         <ObjectProperty IRI="#hasSibling"/>
     </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasColor"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasColor"/>
+            <Class IRI="#African"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasColor"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasColor"/>
+            <Class IRI="#American"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasColor"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasColor"/>
+            <Class IRI="#Asian"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCuisine"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCuisine"/>
+            <Class IRI="#Cuisine"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFullname"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFullname"/>
+            <Class IRI="#Fullname"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasGender"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasLanguage"/>
+            <Class IRI="#African"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasLanguage"/>
+            <Class IRI="#American"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasLanguage"/>
+            <Class IRI="#Asian"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCuisine"/>
+        <ObjectMaxCardinality cardinality="5">
+            <ObjectProperty IRI="#hasCuisine"/>
+            <Class IRI="#Cuisine"/>
+        </ObjectMaxCardinality>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasGender"/>
         <Class IRI="#Gender"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <ObjectMaxCardinality cardinality="5">
+            <ObjectProperty IRI="#hasLanguage"/>
+            <Class IRI="#African"/>
+        </ObjectMaxCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <ObjectMaxCardinality cardinality="5">
+            <ObjectProperty IRI="#hasLanguage"/>
+            <Class IRI="#American"/>
+        </ObjectMaxCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <ObjectMaxCardinality cardinality="5">
+            <ObjectProperty IRI="#hasLanguage"/>
+            <Class IRI="#Asian"/>
+        </ObjectMaxCardinality>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#FullName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Color"/>
+        <Class IRI="#Ethnicity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Cuisine"/>
+        <Class IRI="#Ethnicity"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#FullName"/>
         <Class IRI="#Person"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Color"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Cuisine"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#FullName"/>
         <Datatype abbreviatedIRI="xsd:string"/>

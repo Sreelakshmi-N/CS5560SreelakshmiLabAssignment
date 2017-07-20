@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sreel/ontologies/2017/6/untitled-ontology-33"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sreel/ontologies/2017/6/untitled-ontology-33">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <ObjectProperty IRI="#hasRatings"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Linkedin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PopularWebsites"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Google"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amazon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Facebook"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TotalWebsites"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PopularWebsites"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInternetUsers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Yahoo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paypal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Google"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amazon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Youtube"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Websites"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facebook"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ratings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Youtube"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWebsites"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternetUsers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Linkedin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Yahoo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paypal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TotalWebsites"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#InternetUsers"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasInternetUsers"/>
+            <Class IRI="#InternetUsers"/>
+        </ObjectMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PopularWebsites"/>
+        <ObjectMaxCardinality cardinality="5">
+            <ObjectProperty IRI="#hasRatings"/>
+            <Class IRI="#PopularWebsites"/>
+        </ObjectMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TotalWebsites"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWebsites"/>
+            <Class IRI="#TotalWebsites"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Amazon"/>
+        <Class IRI="#Websites"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facebook"/>
+        <Class IRI="#Websites"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Google"/>
+        <Class IRI="#Websites"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetUsers"/>
+        <Class IRI="#Ratings"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Linkedin"/>
+        <Class IRI="#Websites"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paypal"/>
+        <Class IRI="#Websites"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PopularWebsites"/>
+        <Class IRI="#Ratings"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalWebsites"/>
+        <Class IRI="#Ratings"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Websites"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWebsites"/>
+            <Class IRI="#Websites"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yahoo"/>
+        <Class IRI="#Websites"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Youtube"/>
+        <Class IRI="#Websites"/>
+    </SubClassOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#PopularWebsites"/>
+        <Class IRI="#Ratings"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TotalWebsites"/>
+        <Class IRI="#Ratings"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#PopularWebsites"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TotalWebsites"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
