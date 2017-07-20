@@ -151,6 +151,39 @@
         <Class IRI="#Youtube"/>
         <Class IRI="#Websites"/>
     </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInternetUsers"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRatings"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWebsites"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInternetUsers"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInternetUsers"/>
+            <Class IRI="#InternetUsers"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRatings"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRatings"/>
+            <Class IRI="#Ratings"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWebsites"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWebsites"/>
+            <Class IRI="#Websites"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#PopularWebsites"/>
         <Class IRI="#Ratings"/>
