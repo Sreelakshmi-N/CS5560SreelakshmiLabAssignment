@@ -247,7 +247,7 @@ public class MainNLPClass {
     }
 
     public static HashSet<String> getSynonyms(String word) {
-        RiWordNet wordnet = new RiWordNet("C:\\Users\\VIJAYA YERUVA\\Documents\\WordNet-3.0");
+        RiWordNet wordnet = new RiWordNet("C:\\Users\\sreel\\IdeaProjects\\WordNet-3.0");
         String[] poss = wordnet.getPos(word);
         HashSet<String> synonym = new HashSet<>();
         for (int j = 0; j < poss.length; j++) {
