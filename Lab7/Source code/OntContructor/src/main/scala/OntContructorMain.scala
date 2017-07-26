@@ -7,6 +7,9 @@ import org.semanticweb.owlapi.util.DefaultPrefixManager
 
 import scala.io.Source
 
+/**
+  * Created by Megha Nagabhushan on 17-07-2017.
+  */
 object OntContructorMain {
   def main(args: Array[String]): Unit = {
 

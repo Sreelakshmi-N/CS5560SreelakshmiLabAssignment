@@ -1,5 +1,5 @@
 
-        import org.code.owlapi.manchesterowlsyntax.ManchesterOWLSyntaxEditorParser;
+        import org.coode.owlapi.manchesterowlsyntax.ManchesterOWLSyntaxEditorParser;
         import org.semanticweb.HermiT.Reasoner;
         import org.semanticweb.owlapi.apibinding.OWLManager;
         import org.semanticweb.owlapi.expression.OWLEntityChecker;

@@ -13,9 +13,6 @@ import rita.RiWordNet;
 import java.io.*;
 import java.util.*;
 
-/**
- * Created by Megha Nagabhushan on 7/17/2017.
- */
 public class MainNLPClass {
 
     public static String returnTriplets(String sentence) throws IOException {
@@ -42,8 +39,8 @@ public class MainNLPClass {
         HashSet<String> classSet = new HashSet<>();
         //adding our predefined classes to define the schema
         if (classSet.size() == 0) {
-            classSet.add("GAME");
-            classSet.add("TEAM");
+            classSet.add("EDUCATION");
+            classSet.add("LEVEL");
         }
 
 
@@ -69,10 +66,10 @@ public class MainNLPClass {
                     fileIndividual.write(subjectNER + "," + subject.replaceAll(" .*$", "").replaceAll(" .*$", "") + "\n");
                     classSet.add(subjectNER);
                 } else {
-                    if (subject.contains("game") || subject.contains("Super") || subject.contains("football")) {
-                        fileIndividual.write("GAME," + subject.replaceAll(" .*$", "") + "\n");
-                    } else if (subject.contains("Panthers")) {
-                        fileIndividual.write("TEAM," + subject.replaceAll(" .*$", "") + "\n");
+                    if (subject.contains("schools") || subject.contains("universities") || subject.contains("institutions")) {
+                        fileIndividual.write("EDUCATION," + subject.replaceAll(" .*$", "") + "\n");
+                    } else if (subject.contains("levels")) {
+                        fileIndividual.write("LEVEL," + subject.replaceAll(" .*$", "") + "\n");
                     }
                 }
 
@@ -82,10 +79,10 @@ public class MainNLPClass {
                     fileIndividual.write(objectNER + "," + object.replaceAll(" .*$", "") + "\n");
                     classSet.add(objectNER);
                 } else {
-                    if (object.contains("game") || object.contains("Super") || object.contains("football")) {
-                        fileIndividual.write("GAME," + object.replaceAll(" .*$", "") + "\n");
-                    } else if (object.contains("Panthers")) {
-                        fileIndividual.write("TEAM," + object.replaceAll(" .*$", "") + "\n");
+                    if (object.contains("schools") || object.contains("universities") || object.contains("institutions")) {
+                        fileIndividual.write("EDUCATION," + object.replaceAll(" .*$", "") + "\n");
+                    } else if (object.contains("levels")) {
+                        fileIndividual.write("LEVEL," + object.replaceAll(" .*$", "") + "\n");
                     }
                 }
 
@@ -102,28 +99,28 @@ public class MainNLPClass {
 
                 }
 
-                if ((subject.contains("game") || subject.contains("Super") || subject.contains("football")) &&
-                        (object.contains("game") || object.contains("Super") || object.contains("football"))) {
+                if ((subject.contains("schools") || subject.contains("universities") || subject.contains("institutions")) &&
+                        (object.contains("schools") || object.contains("universities") || object.contains("institutions"))) {
 
-                    objectFile.write(predicate + ",GAME,GAME,Func\n");
-
-                }
-                if ((subject.contains("game") || subject.contains("Super") || subject.contains("football")) &&
-                        (object.contains("Panthers"))) {
-
-                    objectFile.write(predicate + ",GAME,TEAM,Func\n");
+                    objectFile.write(predicate + ",EDUCATION,EDUCATION,Func\n");
 
                 }
-                if ((subject.contains("Panthers")) &&
-                        (object.contains("game") || object.contains("Super") || object.contains("football"))) {
+                if ((subject.contains("schools") || subject.contains("universities") || subject.contains("institutions")) &&
+                        (object.contains("levels"))) {
 
-                    objectFile.write(predicate + ",TEAM,GAME,Func\n");
+                    objectFile.write(predicate + ",EDUCATION,LEVEL,Func\n");
 
                 }
-                if ((subject.contains("Panthers")) &&
-                        (object.contains("Panthers"))) {
+                if ((subject.contains("levels")) &&
+                        (object.contains("schools") || object.contains("universities") || object.contains("institutions"))) {
 
-                    objectFile.write(predicate + ",TEAM,TEAM,Func\n");
+                    objectFile.write(predicate + ",LEVEL,EDUCATION,Func\n");
+
+                }
+                if ((subject.contains("levels")) &&
+                        (object.contains("levels"))) {
+
+                    objectFile.write(predicate + ",LEVEL,LEVEL,Func\n");
 
                 }
                 //end of the objectProperty File
@@ -283,28 +280,28 @@ public class MainNLPClass {
         String objectNER = returnNER(object);
         HashSet<String> subjectSynonym = new HashSet<>();
         HashSet<String> objectSynonym = new HashSet<>();
-        if (subject.contains("Super")) {
-            String x = subject.replaceAll(".+", "SuperBowl");
+        if (subject.contains("school")) {
+            String x = subject.replaceAll(".+", "schools");
             subject = x;
         }
-        if (subject.contains("football")) {
-            String x = subject.replaceAll(".+", "football");
+        if (subject.contains("institution")) {
+            String x = subject.replaceAll(".+", "institutions");
             subject = x;
         }
-        if (subject.contains("San Fran")) {
-            subject = subject.replaceAll(".+", "SanFrancisco");
+        if (subject.contains("university")) {
+            subject = subject.replaceAll(".+", "universities");
         }
-        if (object.contains("Super")) {
-            object = object.replaceAll(".+", "SuperBowl");
+        if (object.contains("school")) {
+            object = object.replaceAll(".+", "schools");
         }
-        if (object.contains("football")) {
-            object = object.replaceAll(".+", "football");
+        if (object.contains("institution")) {
+            object = object.replaceAll(".+", "institutions");
         }
-        if (object.contains("San Fran")) {
-            object = object.replaceAll(".+", "SanFrancisco");
+        if (object.contains("country")) {
+            object = object.replaceAll(".+", "countries");
         }
-        if (object.contains("champion")) {
-            object = object.replaceAll(".+", "champion");
+        if (object.contains("academy")) {
+            object = object.replaceAll(".+", "academies");
         }
 
 
@@ -322,26 +319,26 @@ public class MainNLPClass {
         }
 
 
-        if ((subject.contains("game") || subject.contains("Super") || subject.contains("football")) &&
-                (object.contains("game") || object.contains("Super") || object.contains("football"))) {
+        if ((subject.contains("schools") || subject.contains("institutions") || subject.contains("institutions")) &&
+                (object.contains("schools") || object.contains("universities") || object.contains("institutions"))) {
             if (predicate.contains("was") || predicate.contains("at") || predicate.contains("would")) {
                 fileWriter.write(subject + "," + predicate + "," + object + ",Obj\n");
             }
         }
-        if ((subject.contains("game") || subject.contains("Super") || subject.contains("football")) &&
-                (object.contains("Panthers"))) {
+        if ((subject.contains("schools") || subject.contains("institutions") || subject.contains("universities")) &&
+                (object.contains("levels"))) {
             if (predicate.contains("was") || predicate.contains("at") || predicate.contains("would")) {
                 fileWriter.write(subject + "," + predicate + "," + object + ",Obj\n");
             }
         }
-        if ((subject.contains("Panthers")) &&
-                (object.contains("game") || object.contains("Super") || object.contains("football"))) {
+        if ((subject.contains("levels")) &&
+                (object.contains("schools") || object.contains("institutions") || object.contains("universities"))) {
             if (predicate.contains("was") || predicate.contains("at") || predicate.contains("would")) {
                 fileWriter.write(subject + "," + predicate + "," + object + ",Obj\n");
             }
         }
-        if ((subject.contains("Panthers")) &&
-                (object.contains("Panthers"))) {
+        if ((subject.contains("levels")) &&
+                (object.contains("levels"))) {
             if (predicate.contains("was") || predicate.contains("at") || predicate.contains("would")) {
                 fileWriter.write(subject + "," + predicate + "," + object + ",Obj\n");
             }

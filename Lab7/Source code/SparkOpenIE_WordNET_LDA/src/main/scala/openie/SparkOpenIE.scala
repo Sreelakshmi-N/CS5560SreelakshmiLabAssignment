@@ -17,7 +17,7 @@ object SparkOpenIE {
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
 
-    val ipfile = sparkContext.textFile("data/business.txt").map(s => {
+    val ipfile = sparkContext.textFile("data/dataset.txt").map(s => {
       //Getting OpenIE Form of the word using lda.CoreNLP
 
       val output = MainNLPClass.returnTriplets(s)

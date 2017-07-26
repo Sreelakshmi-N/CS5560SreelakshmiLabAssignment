@@ -1,9 +1,10 @@
 realtedTo,LOCATION,string
 realtedTo,NUMBER,string
-realtedTo,GAME,string
 realtedTo,DATE,string
-realtedTo,TEAM,string
 realtedTo,ORGANIZATION,string
+realtedTo,LEVEL,string
 realtedTo,MISC,string
-realtedTo,DURATION,string
+realtedTo,ENROLL,string
 realtedTo,PERSON,string
+realtedTo,ORDINAL,string
+realtedTo,EDUCATION,string
