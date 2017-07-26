@@ -26,7 +26,7 @@ object W2V {
 
     var myList = Array("Obama", "Hawaii", "to", "with")
 
-      val input = sc.textFile("data/sample1").map(line => line.split(" ").toSeq)
+      val input = sc.textFile("data/business.txt").map(line => line.split(" ").toSeq)
 
       val modelFolder = new File("myModelPath")
       import java.util

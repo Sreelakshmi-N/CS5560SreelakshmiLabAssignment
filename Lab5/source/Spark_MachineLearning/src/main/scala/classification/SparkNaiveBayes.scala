@@ -62,7 +62,7 @@ object SparkNaiveBayes {
   }
 
   private def run(params: Params) {
-    System.setProperty("hadoop.home.dir", "D:\\Mayanka Lenevo F Drive\\winutils")
+    System.setProperty("hadoop.home.dir", "C:\\winutil")
     val conf = new SparkConf().setAppName(s"NBExample with $params").setMaster("local[*]").set("spark.driver.memory", "4g").set("spark.executor.memory", "4g")
     val sc = new SparkContext(conf)
 

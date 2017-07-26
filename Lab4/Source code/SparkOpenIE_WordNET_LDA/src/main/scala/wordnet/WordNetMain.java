@@ -37,7 +37,7 @@ public class WordNetMain {
         props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
         String line = null;
-        String fileName = "data/sentenceSample";
+        String fileName = "data/business.txt";
 
 
 

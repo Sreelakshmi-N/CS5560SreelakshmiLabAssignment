@@ -11,7 +11,7 @@ object WordNetSpark {
     val sc = new SparkContext(conf)
 
 
-    val data=sc.textFile("data/sentenceSample")
+    val data=sc.textFile("data/business.txt")
 
     val dd=data.map(f=>{
       val wordnet = new RiWordNet("C:\\Users\\sreel\\IdeaProjects\\WordNet-3.0")

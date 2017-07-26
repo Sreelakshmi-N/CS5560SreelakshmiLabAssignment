@@ -16,10 +16,10 @@ object qa {
     val call: NLP = new NLP();
     val i = 0
 
-    val text = sc.textFile("sentenceSample");
+    val text = sc.textFile("business.txt");
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
-    val in = sc.textFile("sentenceSample").map(line => {
+    val in = sc.textFile("business.txt").map(line => {
       //Getting OpenIE Form of the word using lda.CoreNLP
 
       val t=call.returnTriplets(line)

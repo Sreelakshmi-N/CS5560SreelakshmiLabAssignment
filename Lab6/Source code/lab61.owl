@@ -149,6 +149,10 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <ClassAssertion>
+        <Class IRI="#Gender"/>
+        <NamedIndividual IRI="#Female"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Education"/>
         <NamedIndividual IRI="#Law"/>
     </ClassAssertion>
